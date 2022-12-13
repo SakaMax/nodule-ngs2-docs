@@ -1,0 +1,6 @@
+
+assemble
+========
+
+.. automodule :: assemble
+    :members:

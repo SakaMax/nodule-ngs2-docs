@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my_types &mdash; nodule-ngs2  ドキュメント</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="save_result" href="save_result.html" />
+    <link rel="prev" title="fastp" href="fastp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> nodule-ngs2
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="all_in.html">all_in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assemble.html">assemble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blast.html">blast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cutadapt.html">cutadapt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demultiplex.html">demultiplex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fastp.html">fastp</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">my_types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#my_types.BlastResultInfo"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_types.BlastResultInfo.result"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo.result</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my_types.BlastResultInfo.query_file"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo.query_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my_types.BlastResultInfo.query_name"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo.query_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my_types.BlastResultInfo.query_seq"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo.query_seq</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my_types.BlastResultInfo.intersection"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo.intersection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo.intersection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo.query_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo.query_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo.query_seq</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">BlastResultInfo.result</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#my_types.WorkflowFunctionInfo"><code class="docutils literal notranslate"><span class="pre">WorkflowFunctionInfo</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_types.WorkflowFunctionInfo.function"><code class="docutils literal notranslate"><span class="pre">WorkflowFunctionInfo.function</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my_types.WorkflowFunctionInfo.name"><code class="docutils literal notranslate"><span class="pre">WorkflowFunctionInfo.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my_types.WorkflowFunctionInfo.step"><code class="docutils literal notranslate"><span class="pre">WorkflowFunctionInfo.step</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5"><code class="docutils literal notranslate"><span class="pre">WorkflowFunctionInfo.function</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6"><code class="docutils literal notranslate"><span class="pre">WorkflowFunctionInfo.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7"><code class="docutils literal notranslate"><span class="pre">WorkflowFunctionInfo.step</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="save_result.html">save_result</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">nodule-ngs2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">my_types</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-my_types">
+<span id="my-types"></span><h1>my_types<a class="headerlink" href="#module-my_types" title="この見出しへのパーマリンク">¶</a></h1>
+<p>NamedTuples for the sake of simplicity</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_types.BlastResultInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_types.</span></span><span class="sig-name descname"><span class="pre">BlastResultInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intersection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_types.BlastResultInfo" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Blast result and additional infomation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_types.BlastResultInfo.result">
+<span class="sig-name descname"><span class="pre">result</span></span><a class="headerlink" href="#my_types.BlastResultInfo.result" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>search result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>BlastResultDF</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_types.BlastResultInfo.query_file">
+<span class="sig-name descname"><span class="pre">query_file</span></span><a class="headerlink" href="#my_types.BlastResultInfo.query_file" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>query fasta file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>PathStr</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_types.BlastResultInfo.query_name">
+<span class="sig-name descname"><span class="pre">query_name</span></span><a class="headerlink" href="#my_types.BlastResultInfo.query_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>query name i.e. &gt;THIS</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_types.BlastResultInfo.query_seq">
+<span class="sig-name descname"><span class="pre">query_seq</span></span><a class="headerlink" href="#my_types.BlastResultInfo.query_seq" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>DNA sequence used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_types.BlastResultInfo.intersection">
+<span class="sig-name descname"><span class="pre">intersection</span></span><a class="headerlink" href="#my_types.BlastResultInfo.intersection" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>is this result from intersection of several results?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, default False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">intersection</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#id0" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">query_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#id1" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">query_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#id2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">query_seq</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#id3" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">result</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#id4" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="my_types.WorkflowFunctionInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_types.</span></span><span class="sig-name descname"><span class="pre">WorkflowFunctionInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_types.WorkflowFunctionInfo" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>The set of infomation AllIn.workflow_generator send.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_types.WorkflowFunctionInfo.function">
+<span class="sig-name descname"><span class="pre">function</span></span><a class="headerlink" href="#my_types.WorkflowFunctionInfo.function" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>work in this step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_types.WorkflowFunctionInfo.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#my_types.WorkflowFunctionInfo.name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>name of this step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_types.WorkflowFunctionInfo.step">
+<span class="sig-name descname"><span class="pre">step</span></span><a class="headerlink" href="#my_types.WorkflowFunctionInfo.step" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>which step?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">function</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span></em><a class="headerlink" href="#id5" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#id6" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">step</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#id7" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="fastp.html" class="btn btn-neutral float-left" title="fastp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="save_result.html" class="btn btn-neutral float-right" title="save_result" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kosuke Sakaguchi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

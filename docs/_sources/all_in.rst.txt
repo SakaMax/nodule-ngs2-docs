@@ -1,7 +1,6 @@
-all\_in module
-==============
 
-.. automodule:: all_in
-   :members:
-   :undoc-members:
-   :show-inheritance:
+all_in
+=======
+
+.. automodule :: all_in
+    :members:

@@ -1,0 +1,6 @@
+
+cutadapt
+========
+
+.. automodule :: cutadapt
+    :members:

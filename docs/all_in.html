@@ -1,108 +1,289 @@
-
 <!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>all_in module &#8212; nodule-ngs2  ドキュメント</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/translations.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>all_in &mdash; nodule-ngs2  ドキュメント</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <link rel="next" title="assemble" href="assemble.html" />
+    <link rel="prev" title="Welcome to nodule-ngs2&#39;s documentation!" href="index.html" /> 
+</head>
 
-  </head><body>
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> nodule-ngs2
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">all_in</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#all_in.AllIn"><code class="docutils literal notranslate"><span class="pre">AllIn</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.AllIn.args"><code class="docutils literal notranslate"><span class="pre">AllIn.args</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.AllIn.settings"><code class="docutils literal notranslate"><span class="pre">AllIn.settings</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.AllIn.logger"><code class="docutils literal notranslate"><span class="pre">AllIn.logger</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.AllIn.dir_path"><code class="docutils literal notranslate"><span class="pre">AllIn.dir_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.AllIn.fastq_path"><code class="docutils literal notranslate"><span class="pre">AllIn.fastq_path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.AllIn.step_counter"><code class="docutils literal notranslate"><span class="pre">AllIn.step_counter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.AllIn.workflow_generator"><code class="docutils literal notranslate"><span class="pre">AllIn.workflow_generator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#all_in.AllInManager"><code class="docutils literal notranslate"><span class="pre">AllInManager</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.AllInManager.args"><code class="docutils literal notranslate"><span class="pre">AllInManager.args</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.AllInManager._all_in"><code class="docutils literal notranslate"><span class="pre">AllInManager._all_in</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.AllInManager.run"><code class="docutils literal notranslate"><span class="pre">AllInManager.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#all_in.ExitHandler"><code class="docutils literal notranslate"><span class="pre">ExitHandler</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#all_in.ExitHandler.emit"><code class="docutils literal notranslate"><span class="pre">ExitHandler.emit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="assemble.html">assemble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blast.html">blast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cutadapt.html">cutadapt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demultiplex.html">demultiplex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fastp.html">fastp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="my_types.html">my_types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="save_result.html">save_result</a></li>
+</ul>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
+        </div>
+      </div>
+    </nav>
 
-          <div class="body" role="main">
-            
-  <section id="all-in-module">
-<h1>all_in module<a class="headerlink" href="#all-in-module" title="この見出しへのパーマリンク">¶</a></h1>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">nodule-ngs2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">all_in</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-all_in">
+<span id="all-in"></span><h1>all_in<a class="headerlink" href="#module-all_in" title="この見出しへのパーマリンク">¶</a></h1>
+<p>Entry point of workflow: replacement for all_in_one.sh</p>
+<dl class="simple">
+<dt>Features...</dt><dd><ul class="simple">
+<li><p>Tag &amp; Adapter trimming</p></li>
+<li><p>Quality filtering</p></li>
+<li><p>De novo assembling</p></li>
+<li><p>Homology searching</p></li>
+</ul>
+</dd>
+</dl>
+<p>This script reads settings from the  <code class="docutils literal notranslate"><span class="pre">settings.yaml</span></code> .
+And, of course, fastq files are needed.</p>
+<p class="rubric">サンプル</p>
+<p>If you have a paired-read fastq (R1.fastq and R2.fastq) sequence and use SKESA,
+type (in shell):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python all_in.py -1 R1.fastq -2 R2.fastq -a skesa
+</pre></div>
+</div>
+<p>When you assemble using megahit and apply some parameters to megahit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python all_in.py -1 R1.fastq -2 R2.fastq -a megahit -s ./settings.yaml
+</pre></div>
+</div>
+<p>For more infomation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python all_in.py --help
+</pre></div>
+</div>
+<p>or check <code class="docutils literal notranslate"><span class="pre">settings.yaml</span></code> .</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="all_in.AllIn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">all_in.</span></span><span class="sig-name descname"><span class="pre">AllIn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#all_in.AllIn" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Run the script, hold status and progress of this script.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="all_in.AllIn.args">
+<span class="sig-name descname"><span class="pre">args</span></span><a class="headerlink" href="#all_in.AllIn.args" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>arguments from command line.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Namespace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="all_in.AllIn.settings">
+<span class="sig-name descname"><span class="pre">settings</span></span><a class="headerlink" href="#all_in.AllIn.settings" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>settings from yaml.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="all_in.AllIn.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#all_in.AllIn.logger" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>logger(to CLI and file)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="all_in.AllIn.dir_path">
+<span class="sig-name descname"><span class="pre">dir_path</span></span><a class="headerlink" href="#all_in.AllIn.dir_path" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>dict of path to directories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="all_in.AllIn.fastq_path">
+<span class="sig-name descname"><span class="pre">fastq_path</span></span><a class="headerlink" href="#all_in.AllIn.fastq_path" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>dict of path to fastq sequences</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="all_in.AllIn.step_counter">
+<span class="sig-name descname"><span class="pre">step_counter</span></span><a class="headerlink" href="#all_in.AllIn.step_counter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>which step should this object run.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in.AllIn.workflow_generator">
+<span class="sig-name descname"><span class="pre">workflow_generator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">WorkflowFunctionInfo</span></span></span><a class="headerlink" href="#all_in.AllIn.workflow_generator" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Yield dict about workflow function.</p>
+<p>returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="all_in.AllInManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">all_in.</span></span><span class="sig-name descname"><span class="pre">AllInManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#all_in.AllInManager" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Load/Save AllIn and run AllIn's workflow</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="all_in.AllInManager.args">
+<span class="sig-name descname"><span class="pre">args</span></span><a class="headerlink" href="#all_in.AllInManager.args" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>arguments from stdin</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Namespace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="all_in.AllInManager._all_in">
+<span class="sig-name descname"><span class="pre">_all_in</span></span><a class="headerlink" href="#all_in.AllInManager._all_in" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>actual scripts and its status</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#all_in.AllIn" title="all_in.AllIn">AllIn</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in.AllInManager.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#all_in.AllInManager.run" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Run the script</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="all_in.ExitHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">all_in.</span></span><span class="sig-name descname"><span class="pre">ExitHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#all_in.ExitHandler" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Exit when this handler catch the message.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="all_in.ExitHandler.emit">
+<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">LogRecord</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#all_in.ExitHandler.emit" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Emit a record.</p>
+<p>If the stream was not opened because 'delay' was specified in the
+constructor, open it before calling the superclass's emit.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 
+           </div>
           </div>
-          
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to nodule-ngs2&#39;s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="assemble.html" class="btn btn-neutral float-right" title="assemble" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kosuke Sakaguchi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">nodule-ngs2</a></h1>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
 
-
-
-
-
-
-
-
-<h3>ナビゲーション</h3>
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="all_in_tools.html">all_in_tools package</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">クイック検索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="検索" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2022, Kosuke Sakaguchi.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/all_in.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-  </body>
+</body>
 </html>

@@ -1,0 +1,6 @@
+
+my_types
+========
+
+.. automodule :: my_types
+    :members:
